@@ -93,7 +93,7 @@
                           <Component id="txt_canhBaoPassword" alignment="0" max="32767" attributes="0"/>
                           <Component id="txt_password" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButton1" alignment="0" pref="215" max="32767" attributes="0"/>
-                          <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_quenMatKhau" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -119,7 +119,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_quenMatKhau" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
             <Property name="text" type="java.lang.String" value="T&#xe0;i kho&#x1ea3;n "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btn_quenMatKhau">
           <Properties>
             <Property name="text" type="java.lang.String" value="Forgot password ? "/>
           </Properties>
