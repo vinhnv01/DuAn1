@@ -8,12 +8,15 @@ import java.util.Properties;
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 /**
  *
@@ -47,14 +50,19 @@ public class SendEmail {
         message.setRecipients(
                 Message.RecipientType.TO, InternetAddress.parse(emailNhan));
 
-        // Tiêu đề
-        message.setSubject(tieuDe);
-
         // Nội dung
         message.setSubject("Testing Gmail " + tieuDe);
-        message.setText("Dear ,"
-                + "\n\n" + noiDung
-                + "\n\n Please do not spam my email!");
+//        message.setText("Dear ,"
+//                + "\n\n" + noiDung
+//                + "\n\n Please do not spam my email!");
+
+        MimeBodyPart mimeBodyPart = new MimeBodyPart();
+        mimeBodyPart.setContent(noiDung, "text/html; charset=utf-8");
+
+        Multipart multipart = new MimeMultipart();
+        multipart.addBodyPart(mimeBodyPart);
+
+        message.setContent(multipart);
 
         Transport.send(message);
     }
