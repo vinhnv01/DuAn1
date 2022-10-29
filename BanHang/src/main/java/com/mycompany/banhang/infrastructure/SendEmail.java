@@ -52,16 +52,11 @@ public class SendEmail {
 
         // Nội dung
         message.setSubject("Testing Gmail " + tieuDe);
-//        message.setText("Dear ,"
-//                + "\n\n" + noiDung
-//                + "\n\n Please do not spam my email!");
-
         MimeBodyPart mimeBodyPart = new MimeBodyPart();
         mimeBodyPart.setContent(noiDung, "text/html; charset=utf-8");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(mimeBodyPart);
-
         message.setContent(multipart);
 
         Transport.send(message);
