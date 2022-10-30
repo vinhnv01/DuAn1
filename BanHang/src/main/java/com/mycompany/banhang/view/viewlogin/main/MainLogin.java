@@ -70,16 +70,16 @@ public class MainLogin extends javax.swing.JFrame {
         loginAndRegister2Layout.setHorizontalGroup(
             loginAndRegister2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginAndRegister2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+                .addGap(73, 73, 73)
                 .addComponent(loginAndRegister4, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         loginAndRegister2Layout.setVerticalGroup(
             loginAndRegister2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginAndRegister2Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginAndRegister2Layout.createSequentialGroup()
+                .addContainerGap(81, Short.MAX_VALUE)
                 .addComponent(loginAndRegister4, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addGap(79, 79, 79))
         );
 
         main.add(loginAndRegister2, java.awt.BorderLayout.CENTER);
