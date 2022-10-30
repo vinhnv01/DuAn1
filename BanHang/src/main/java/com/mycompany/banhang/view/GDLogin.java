@@ -15,6 +15,7 @@ public class GDLogin extends javax.swing.JFrame {
      */
     public GDLogin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -60,6 +61,10 @@ public class GDLogin extends javax.swing.JFrame {
                 txt_passwordMouseClicked(evt);
             }
         });
+
+        txt_canhBaoUserName.setForeground(new java.awt.Color(204, 0, 51));
+
+        txt_canhBaoPassword.setForeground(new java.awt.Color(204, 0, 0));
 
         jButton1.setBackground(new java.awt.Color(204, 102, 0));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

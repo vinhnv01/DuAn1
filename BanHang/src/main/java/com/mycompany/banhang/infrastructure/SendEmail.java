@@ -27,7 +27,7 @@ public class SendEmail {
     private final static String emailGui = "vinhnvph23845@fpt.edu.vn";
     private final static String matKhau = "010620Vinh";
 
-    public static void guiMail(String emailNhan,
+    public void guiMail(String emailNhan,
             String tieuDe, String noiDung)
             throws AddressException, MessagingException {
         Properties prop = new Properties();
@@ -62,8 +62,4 @@ public class SendEmail {
         Transport.send(message);
     }
 
-    public static void main(String[] args) throws MessagingException {
-        String matKhauMoi = new TaoChuoiNgauNhien().getMaRanDum(" Mat khau cua ban : ");
-        SendEmail.guiMail("anhvinh12a888@gmail.com", "", matKhauMoi);
-    }
 }
