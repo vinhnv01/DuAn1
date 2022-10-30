@@ -24,8 +24,8 @@ import javax.mail.internet.MimeMultipart;
  */
 public class SendEmail {
 
-    private final static String emailGui = "vinhnvph23845@fpt.edu.vn";
-    private final static String matKhau = "010620Vinh";
+    private final static String emailGui = "t39022749@gmail.com";
+    private final static String matKhau = "enjkxtscsburacui";
 
     public void guiMail(String emailNhan,
             String tieuDe, String noiDung)
