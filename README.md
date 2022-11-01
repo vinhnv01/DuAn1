@@ -22,20 +22,7 @@
 - Cột khóa ngoại phải có tên bảng với khóa chính của chúng, ví dụ: blog_id đại diện cho id khóa ngoại từ blog bảng.
 - Tránh các tên khóa chính có ý nghĩa về mặt ngữ nghĩa. Một lỗi thiết kế cổ điển là tạo một bảng có khóa chính có ý nghĩa thực tế như 'name' làm khóa chính. Trong trường hợp này nếu một số người thay đổi tên của mình thì mối quan hệ với bảng khác sẽ có hiệu lực và tên có thể lặp lại (không phải duy nhất).
 ## II.BE
-### 1. Controller
-- Tạo class Controller theo chức năng trên từng màn hình trên Admin.
-- Quy ước đặt tên URL cho lệnh controller có thể tuân theo một trong các phương pháp sau:
-    - Theo các hoạt động Tạo, Đọc, Cập nhật và Xóa (CRUD):
-        - Lấy dữ liệu : ***GET***
-        - Tạo dữ liệu : ***POST***
-        - Cập nhập dữ liệu : ***PUT***
-        - Xóa dữ liệu : ***DELETE***
-    - Tuân theo các quy ước đặt tên chung dựa trên các hành động:
-        - Đinh dạng: ***/{ControllerMapping}/{action}***
-        - Ví dụ: /company/add, /company/import, ...
-    - Sử dụng chữ thường
-    - Sử dụng dấu gạch ngang (-)
-- Phải có đường dẫn chung của cả controller rồi mới dẫn tới đường dẫn riêng của từng api
+### 1. view 
 - Tên biến + Tên hàm + Tên package + Tên class
    - Tất cả các loại tên phải tuân thủ theo quy tắc con lạc đà và chữ đầu tiên không viết hoa (TRỪ LÊN CLASS CHỮ ĐẦU VIẾT HOA)
    - Tên đặt phải có ý nghĩa 
