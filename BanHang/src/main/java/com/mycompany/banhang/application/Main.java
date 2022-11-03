@@ -11,6 +11,6 @@ package com.mycompany.banhang.application;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello");
-        System.out.println("Huynh them hê sờ lô hê sờ li li");
+
     }
 }
