@@ -72,12 +72,12 @@ public class HibernateUtil {
         conf.addAnnotatedClass(DongSP.class);
         conf.addAnnotatedClass(KhuyenMai.class);
         conf.addAnnotatedClass(NhaSanXuat.class);
-        conf.addAnnotatedClass(ChiTietSP.class);
         conf.addAnnotatedClass(ChucVu.class);
         conf.addAnnotatedClass(CuaHang.class);
         conf.addAnnotatedClass(NhanVien.class);
         conf.addAnnotatedClass(KhachHang.class);
         conf.addAnnotatedClass(HoaDon.class);
+        conf.addAnnotatedClass(ChiTietSP.class);
         conf.addAnnotatedClass(HoaDonChiTiet.class);
         conf.addAnnotatedClass(MaGiamGia.class);
         conf.addAnnotatedClass(MaKhuyenMaiKhachHang.class);
