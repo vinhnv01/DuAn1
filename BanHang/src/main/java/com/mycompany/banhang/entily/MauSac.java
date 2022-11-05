@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 /**
  *
@@ -27,14 +29,24 @@ import lombok.NoArgsConstructor;
 public class MauSac implements Serializable{
 
     @Id
-    @GeneratedValue
-    @Column(name = "Id", columnDefinition = "uniqueidentifier")
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator",
+        parameters = {
+            @Parameter(
+                name = "uuid_gen_strategy_class",
+                value = "org.hibernate.id.uuid.CustomVersionOneStrategy"
+            )
+        }
+    )
+    @Column(name = "id", columnDefinition = "uniqueidentifier")
     private UUID idMauSac;
 
-    @Column(name = "Ma", length = 20)
+    @Column(name = "ma", unique = true, length = 20)
     private String ma;
 
-    @Column(name = "Ten", length = 30)
+    @Column(name = "ten", length = 30)
     private String ten;
 
     

@@ -19,6 +19,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 /**
  *
@@ -33,11 +35,21 @@ import lombok.Setter;
 public class NhanVien implements Serializable {
 
     @Id
-    @GeneratedValue
-    @Column(name = "Id", columnDefinition = "uniqueidentifier")
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator",
+        parameters = {
+            @Parameter(
+                name = "uuid_gen_strategy_class",
+                value = "org.hibernate.id.uuid.CustomVersionOneStrategy"
+            )
+        }
+    )
+    @Column(name = "id", columnDefinition = "uniqueidentifier")
     private UUID idNhanVien;
 
-    @Column(name = "ma", length = 20)
+    @Column(name = "ma", unique = true, length = 20)
     private String ma;
 
     @Column(name = "ho_ten", length = 30)

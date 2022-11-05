@@ -13,6 +13,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 /**
  *
@@ -24,11 +26,21 @@ import lombok.Data;
 public class KhachHang implements Serializable {
 
     @Id
-    @GeneratedValue
-    @Column(name = "Id", columnDefinition = "uniqueidentifier")
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator",
+        parameters = {
+            @Parameter(
+                name = "uuid_gen_strategy_class",
+                value = "org.hibernate.id.uuid.CustomVersionOneStrategy"
+            )
+        }
+    )
+    @Column(name = "id", columnDefinition = "uniqueidentifier")
     private UUID idKhachHang;
 
-    @Column(name = "ma", length = 20)
+    @Column(name = "ma", unique = true, length = 20)
     private String ma;
 
     @Column(name = "ho_ten", length = 30)
