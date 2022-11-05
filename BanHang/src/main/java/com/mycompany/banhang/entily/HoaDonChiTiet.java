@@ -17,6 +17,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Data;
 import lombok.ToString;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 /**
  *
@@ -29,14 +31,24 @@ import lombok.ToString;
 public class HoaDonChiTiet implements Serializable {
 
     @Id
-    @GeneratedValue
-    @Column(name = "Id", columnDefinition = "uniqueidentifier")
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator",
+        parameters = {
+            @Parameter(
+                name = "uuid_gen_strategy_class",
+                value = "org.hibernate.id.uuid.CustomVersionOneStrategy"
+            )
+        }
+    )
+    @Column(name = "id", columnDefinition = "uniqueidentifier")
     private UUID idHoaDonChiTiet;
 
-    @Column(name = "SoLuong")
+    @Column(name = "so_luong")
     private int soLuong;
 
-    @Column(name = "DonGia")
+    @Column(name = "don_gia")
     private BigDecimal donGia;
 
     @ManyToOne(fetch = FetchType.EAGER)

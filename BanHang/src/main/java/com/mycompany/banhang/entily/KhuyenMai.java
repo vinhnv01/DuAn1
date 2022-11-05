@@ -5,6 +5,7 @@
 package com.mycompany.banhang.entily;
 
 
+import java.sql.Date;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +15,8 @@ import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
 
 /**
  *
@@ -27,14 +30,24 @@ import lombok.NoArgsConstructor;
 public class KhuyenMai {
     
     @Id
-    @GeneratedValue
-    @Column(name = "Id" , columnDefinition = "uniqueidentifier")
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+        name = "UUID",
+        strategy = "org.hibernate.id.UUIDGenerator",
+        parameters = {
+            @Parameter(
+                name = "uuid_gen_strategy_class",
+                value = "org.hibernate.id.uuid.CustomVersionOneStrategy"
+            )
+        }
+    )
+    @Column(name = "id" , columnDefinition = "uniqueidentifier")
     private UUID idKhuyenMai;
 
     @Column(name = "ngay_bat_dau")
     private long ngayBatDau;
 
-    @Column(name = "ngay_ket thuc")
+    @Column(name = "ngay_ket_thuc")
     private long ngayKetThuc;
 
     @Column(name = "trang_thai")
