@@ -5,7 +5,6 @@
 package com.mycompany.banhang.entily;
 
 
-import java.sql.Date;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,7 +34,7 @@ public class KhuyenMai {
     @Column(name = "ngay_bat_dau")
     private long ngayBatDau;
 
-    @Column(name = "ngay_ket thuc")
+    @Column(name = "ngay_ket_thuc")
     private long ngayKetThuc;
 
     @Column(name = "trang_thai")

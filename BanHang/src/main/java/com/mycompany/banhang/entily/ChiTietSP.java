@@ -66,10 +66,6 @@ public class ChiTietSP implements Serializable {
     private NhaSanXuat nhaSanXuat;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "idMaGiamGia")
-    private MaGiamGia maGiamGia;
-
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idDongSP")
     private DongSP dongSP;
 }
