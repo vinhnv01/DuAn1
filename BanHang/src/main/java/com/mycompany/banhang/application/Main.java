@@ -4,6 +4,8 @@
  */
 package com.mycompany.banhang.application;
 
+
+
 /**
  *
  * @author vinhnv
@@ -12,6 +14,5 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello");
-        System.out.println("vinh an cut");
     }
 }
