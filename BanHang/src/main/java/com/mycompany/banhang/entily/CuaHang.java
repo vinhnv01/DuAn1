@@ -46,10 +46,10 @@ public class CuaHang implements Serializable{
     @Column(name = "ma", unique = true, length = 20)
     private String ma;
     
-    @Column(name = "ten", length = 50)
+    @Column(name = "ten", columnDefinition="nvarchar(50)")
     private String ten;
     
-    @Column(name = "dia_chi", length = 100)
+    @Column(name = "dia_chi", columnDefinition="nvarchar(30)")
     private String diaChi;
 
 }

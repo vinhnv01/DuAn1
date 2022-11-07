@@ -46,7 +46,7 @@ public class NhaSanXuat implements Serializable {
     @Column(name = "ma", unique = true, length = 20)
     private String ma;
 
-    @Column(name = "ten_nha_san_xuat", length = 30)
+    @Column(name = "ten_nha_san_xuat")
     private String ten;
 
 }

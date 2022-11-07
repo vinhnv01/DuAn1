@@ -46,7 +46,7 @@ public class DongSP implements Serializable {
     @Column(name = "ma", unique = true, length = 20)
     private String ma;
 
-    @Column(name = "ten_dong", length = 30)
+    @Column(name = "ten_dong" ,columnDefinition="nvarchar(200)")
     private String ten;
     
     

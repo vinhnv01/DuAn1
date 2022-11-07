@@ -43,7 +43,7 @@ public class KhachHang implements Serializable {
     @Column(name = "ma", unique = true, length = 20)
     private String ma;
 
-    @Column(name = "ho_ten", length = 30)
+    @Column(name = "ho_ten", columnDefinition="nvarchar(30)")
     private String hoTen;
 
     @Column(name = "gioi_tinh", length = 10)
@@ -61,7 +61,7 @@ public class KhachHang implements Serializable {
     @Column(name = "mat_khau", length = 30)
     private String password;
 
-    @Column(name = "dia_chi", length = 500)
+    @Column(name = "dia_chi", columnDefinition="nvarchar(500)")
     private String diaChi;
 
     @Column(name = "trang_thai")
