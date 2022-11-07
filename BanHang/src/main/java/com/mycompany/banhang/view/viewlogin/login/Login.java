@@ -109,6 +109,8 @@ public class Login extends PalnelCustom {
         // TODO add your handling code here:
         new QuenMatKhau().setVisible(true);
         
+        
+        
     }//GEN-LAST:event_btn_quenMatKhauActionPerformed
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
