@@ -62,7 +62,7 @@ public class ChiTietSP implements Serializable {
     @Column(name = "gia_ban")
     private BigDecimal giaBan;
 
-    @Column(name = "mo_ta")
+    @Column(name = "mo_ta" ,columnDefinition="nvarchar(500)")
     private String moTa;
 
     @ManyToOne(fetch = FetchType.EAGER)

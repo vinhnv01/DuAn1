@@ -46,7 +46,7 @@ public class ChucVu implements Serializable {
     @Column(name = "ma", unique = true, length = 20)
     private String ma;
     
-    @Column(name = "ten",length = 50)
+    @Column(name = "ten",columnDefinition="nvarchar(30)")
     private String ten;
 
 }

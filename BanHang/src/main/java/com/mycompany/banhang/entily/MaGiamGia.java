@@ -46,11 +46,11 @@ public class MaGiamGia {
     private UUID idMaGiamGia;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "idChiTietSanPham")
-    private ChiTietSP chiTietSP;
-
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "idKhuyenMai")
     private KhuyenMai khuyenMai;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "idChiTietSanPham")
+    private ChiTietSP chiTietSP;
 
 }

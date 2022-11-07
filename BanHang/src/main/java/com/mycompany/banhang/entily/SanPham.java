@@ -43,10 +43,10 @@ public class SanPham implements Serializable {
     @Column(name = "id", columnDefinition = "uniqueidentifier")
     private UUID idSanPham;
     
-    @Column(name = "ma", unique = true, length = 20)
+    @Column(name = "ma", unique = true)
     private String ma;
    
-    @Column(name = "ten_san_pham",length = 30)
+    @Column(name = "ten_san_pham")
     private String ten;
 
 }
