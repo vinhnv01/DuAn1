@@ -7,7 +7,7 @@ package com.mycompany.banhang.service.impl;
 import com.mycompany.banhang.infrastructure.SendEmail;
 import com.mycompany.banhang.infrastructure.TaoChuoiNgauNhien;
 import com.mycompany.banhang.service.LoginService;
-import com.mycompany.banhang.core.viewlogin.login.QuenMatKhau;
+import com.mycompany.banhang.view.viewlogin.login.QuenMatKhau;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.mail.MessagingException;
