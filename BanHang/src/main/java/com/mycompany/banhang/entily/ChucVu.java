@@ -40,8 +40,7 @@ public class ChucVu implements Serializable {
             )
         }
     )
-    @Column(name = "id", columnDefinition = "uniqueidentifier")
-    private UUID idChucVu;
+    
     
     @Column(name = "ma", unique = true, length = 20)
     private String ma;
